@@ -1,0 +1,180 @@
+/* Base layout */
+html, body {
+	height: 100%;
+}
+body {
+	margin: 0;
+	background: #000;
+	color: #fff;
+    font-family: "Comic Sans MS", "Comic Sans", sans-serif;
+	position: relative;
+	overflow: hidden;
+}
+
+/* Title top-left */
+h1 {
+    text-align: center;
+    width: 100%;
+	position: absolute;
+	top: 20px;
+	margin: 0;
+	font-size: 40px;
+	letter-spacing: 1px;
+	font-weight: 700;
+}
+
+/* Subtitle centered above choices */
+h3 {
+	position: absolute;
+	top: 120px;
+    text-align: center;
+    width: 100%;
+	margin: 0;
+	font-size: 30px;
+	font-weight: 600;
+}
+
+/* Timer top-right */
+h2 {
+	position: absolute;
+	top: 12px;
+	right: 18px;
+	margin: 0;
+	color: #e31b23; /* vivid red */
+	font-size: 64px;
+	font-weight: 800;
+}
+
+/* Choice boxes */
+.choice {
+	position: absolute;
+	top: 280px;
+	width: 220px;
+	height: 48px;
+	line-height: 48px;
+	text-align: center;
+	color: #fff;
+	background: transparent;
+	border-radius: 4px;
+	box-sizing: border-box;
+	font-weight: 700;
+	cursor: pointer;
+	user-select: none;
+}
+
+.choice.correcto {
+	left: calc(50% - 280px);
+	border: 4px solid #1fb45a; /* green */
+}
+
+.choice.incorrecto {
+	left: calc(50% + 60px);
+	border: 4px solid #e31b23; /* red */
+}
+
+/* Control (play/pause) button */
+body > a.control {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 380px;
+	display: block;
+	width: 84px;
+	height: 84px;
+	border-radius: 50%;
+	background: #e31b23;
+	text-indent: -9999px;
+	box-shadow: 0 6px 0 rgba(0,0,0,0.2);
+}
+
+/* Pause icon: two black vertical bars (for .control.running) */
+body > a.control::before,
+body > a.control::after {
+	content: "";
+	position: absolute;
+	top: 18px;
+	width: 18px;
+	height: 48px;
+	background: #000;
+	border-radius: 2px;
+}
+
+body > a.control::before { left: 22px; }
+body > a.control::after  { right: 22px; }
+
+/* When the control is NOT running, show a play triangle instead */
+body > a.control:not(.running)::before {
+	left: 28px;
+	top: 22px;
+	width: 0;
+	height: 0;
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+	border-left: 28px solid #000;
+	background: transparent;
+	border-radius: 0;
+}
+body > a.control:not(.running)::after {
+	display: none;
+}
+
+/* When running, ensure the two bars are visible (override any triangle rules) */
+body > a.control.running::before,
+body > a.control.running::after {
+	display: block;
+	width: 18px;
+	height: 48px;
+	background: #000;
+	border-radius: 2px;
+	top: 18px;
+}
+
+/* Refresh button */
+body > a.refresh,
+body > a.restart {
+	position: absolute;
+	top: 392px;
+	display: block;
+	width: 56px;
+	height: 56px;
+	border-radius: 50%;
+	background: #f0f0f0;
+	color: #000;
+	text-align: center;
+	line-height: 56px;
+	font-weight: 700;
+	box-shadow: 0 4px 0 rgba(0,0,0,0.15);
+	text-decoration: none;
+}
+
+body > a.refresh {
+	left: calc(50% - 160px);
+}
+
+body > a.restart {
+	left: calc(50% - 100px);
+}
+
+/* Score badge */
+#score {
+	position: absolute;
+	top: 92px;
+	right: 18px;
+	color: #fff;
+	background: rgba(0,0,0,0.3);
+	padding: 6px 10px;
+	border-radius: 6px;
+	font-weight: 700;
+}
+
+/* Small responsive tweaks */
+@media (max-width: 600px) {
+	h2 { font-size: 48px; }
+	.choice { width: 160px; left: calc(50% - 140px); }
+	.choice.incorrecto { left: calc(50% + 20px); }
+	body > a.control { width: 64px; height: 64px; top: 360px; }
+	body > a.refresh,
+	body > a.restart { width: 48px; height: 48px; line-height: 48px; top: 356px; }
+	body > a.control::before, body > a.control::after { top: 14px; height: 36px; width: 12px; }
+}
+
