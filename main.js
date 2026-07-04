@@ -4,7 +4,10 @@ const personajes = ["Indio Solari", "Charly García","Luis Alberto Spinetta", "G
     "María Becerra", "Nicky Nicole", "Luck Ra","Rodrigo Bueno", "Ca7riel","Paco Amoroso", "Ricardo Mollo", "Chaqueño Palavecino", "Skay Bellinson", "Vicentico", "Gilda", "Pablo Lezcano", "Ale Sergi", "Lali Espósito", "El Noba", "L-Gante", "WOS",
     "Mercedes Sosa", "Ricardo Iorio", "Andrés Calamaro", "Pity Álvarez", "Mirtha Legrand", "Juan Domingo Perón", "San José de San Martín", "Eva Perón", "Juan Manuel Belgrano", "Cristina Kirchner", "Jorge Rafael Videla", "Mauricio Macri", 
     "Carlos Menem", "Javier Milei", "Nik", "Myriam Bregman", "Leo Messi", "Manu Ginóbili", "Diego Maradona", "Juan Martín del Potro", "Paula Pareto", "Luis Scola", "Juan Román Riquelme", "Martín Palermo", "Ángel Di María", "LeBron James", 
-    "Michael Jordan", "Mafalda", "Hijitus", "Gaturro", "Larguirucho", "Alberto Olmedo", "Jorge Porcel", "Wanda Nara", "Bananero", "Bananirou", "Gaspi", "Coscu", "Momo Benavidez"
+    "Michael Jordan", "Mafalda", "Hijitus", "Gaturro", "Larguirucho", "Alberto Olmedo", "Jorge Porcel", "Wanda Nara", "Bananero", "Bananirou", "Gaspi", "Coscu", "Momo Benavidez", "Davo Xeneize", "Florencia Peña", "Guillermo Francella", "Luis Brandoni",
+    "Mario Bros", "Luigi", "Sonic", "Rayman", "Kirby", "Donkey Kong", "Megaman", "Crash Bandicoot", "Kratos", "Steve Minecraft", "Gordon Freeman", "Pikachu", "Charizard", "Goku", "Vegeta", "Homero Simpson", "Bart Simpson", "Lisa Simpson", "Maggie Simpson",
+    "Marge Simpson", "El Chavo del 8", "Chapulín Colorado", "Don Ramón", "Perry el Ornitorrinco", "Phineas", "Ferb", "Carlitox", "Jaique", "Edward (3A)", "Adriel", "Batman", "Spiderman","Capitán América", "Superman", "Linterna Verde", "El Eternauta",
+    "El Guasón", "Iron Man", "Hulk", "Mujer Maravilla", "Flash Gordon"
 ];
 let disponibles = [...personajes];
 
