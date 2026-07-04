@@ -7,7 +7,8 @@ const personajes = ["Indio Solari", "Charly García","Luis Alberto Spinetta", "G
     "Michael Jordan", "Mafalda", "Hijitus", "Gaturro", "Larguirucho", "Alberto Olmedo", "Jorge Porcel", "Wanda Nara", "Bananero", "Bananirou", "Gaspi", "Coscu", "Momo Benavidez", "Davo Xeneize", "Florencia Peña", "Guillermo Francella", "Luis Brandoni",
     "Mario Bros", "Luigi", "Sonic", "Rayman", "Kirby", "Donkey Kong", "Megaman", "Crash Bandicoot", "Kratos", "Steve Minecraft", "Gordon Freeman", "Pikachu", "Charizard", "Goku", "Vegeta", "Homero Simpson", "Bart Simpson", "Lisa Simpson", "Maggie Simpson",
     "Marge Simpson", "El Chavo del 8", "Chapulín Colorado", "Don Ramón", "Perry el Ornitorrinco", "Phineas", "Ferb", "Carlitox", "Jaique", "Edward (3A)", "Adriel", "Batman", "Spiderman","Capitán América", "Superman", "Linterna Verde", "El Eternauta",
-    "El Guasón", "Iron Man", "Hulk", "Mujer Maravilla", "Flash Gordon"
+    "El Guasón", "Iron Man", "Hulk", "Mujer Maravilla", "Flash Gordon", "Adolf Hitler", "Benito Mussolini", "Joseph Stalin", "Jesucristo", "Donald Trump", "JK Rowling", "John F. Kennedy", "Tung Tung Sahur", "Bob Esponja", "Patricio Estrella",
+    "Don Cangrejo", "Calamardo", "Mickey Mouse", "Minnie Mouse","Goofy", "Pac-Man", "Simón Bolivar", "Domingo F. Sarmiento", "Julio A. Roca", "Martín Fierro", "Sandro de América", "Palito Ortega", "King Kong", "Godzilla"
 ];
 let disponibles = [...personajes];
 

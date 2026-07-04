@@ -8,7 +8,9 @@ body {
 	color: #fff;
     font-family: "Comic Sans MS", "Comic Sans", sans-serif;
 	position: relative;
-	overflow: hidden;
+	overflow-x: hidden;
+	overflow-y: auto;
+	min-height: 100dvh;
 }
 
 /* Title top-left */
@@ -167,14 +169,141 @@ body > a.restart {
 	font-weight: 700;
 }
 
-/* Small responsive tweaks */
-@media (max-width: 600px) {
-	h2 { font-size: 48px; }
-	.choice { width: 160px; left: calc(50% - 140px); }
-	.choice.incorrecto { left: calc(50% + 20px); }
-	body > a.control { width: 64px; height: 64px; top: 360px; }
+/* Responsive layout for phones */
+@media (max-width: 768px) {
+	body {
+		overflow-y: auto;
+		padding-bottom: 24px;
+	}
+
+	h1 {
+		font-size: clamp(24px, 6vw, 34px);
+		top: 16px;
+	}
+
+	h3 {
+		top: 90px;
+		font-size: clamp(20px, 4.5vw, 28px);
+	}
+
+	h2 {
+		font-size: clamp(32px, 8vw, 48px);
+		top: 12px;
+		right: 12px;
+	}
+
+	.choice {
+		top: 230px;
+		width: min(42vw, 180px);
+		height: 46px;
+		line-height: 46px;
+		font-size: 15px;
+	}
+
+	.choice.correcto {
+		left: calc(50% - min(42vw, 180px) - 10px);
+	}
+
+	.choice.incorrecto {
+		left: calc(50% + 10px);
+	}
+
+	body > a.control {
+		top: 360px;
+		width: 70px;
+		height: 70px;
+	}
+
+	body > a.control::before,
+	body > a.control::after {
+		top: 15px;
+		height: 40px;
+		width: 14px;
+	}
+
+	body > a.control::before { left: 18px; }
+	body > a.control:not(.running)::before {
+		left: 24px;
+		top: 18px;
+		border-top: 17px solid transparent;
+		border-bottom: 17px solid transparent;
+		border-left: 24px solid #000;
+	}
+
 	body > a.refresh,
-	body > a.restart { width: 48px; height: 48px; line-height: 48px; top: 356px; }
-	body > a.control::before, body > a.control::after { top: 14px; height: 36px; width: 12px; }
+	body > a.restart {
+		top: 370px;
+		width: 48px;
+		height: 48px;
+		line-height: 48px;
+	}
+
+	body > a.refresh { left: calc(50% - 120px); }
+	body > a.restart { left: calc(50% - 60px); }
+
+	#score {
+		top: 86px;
+		right: 12px;
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+	body {
+		overflow-y: auto;
+		padding-bottom: 24px;
+	}
+
+	h1 {
+		top: 8px;
+		font-size: 24px;
+	}
+
+	h3 {
+		top: 58px;
+		font-size: 20px;
+	}
+
+	h2 {
+		top: 6px;
+		font-size: 30px;
+	}
+
+	.choice {
+		top: 135px;
+		width: 140px;
+		height: 42px;
+		line-height: 42px;
+	}
+
+	.choice.correcto {
+		left: calc(50% - 170px);
+	}
+
+	.choice.incorrecto {
+		left: calc(50% + 30px);
+	}
+
+	body > a.control {
+		top: 200px;
+		width: 60px;
+		height: 60px;
+	}
+
+	body > a.refresh,
+	body > a.restart {
+		top: 208px;
+		width: 44px;
+		height: 44px;
+		line-height: 44px;
+	}
+
+	body > a.refresh { left: calc(50% - 115px); }
+	body > a.restart { left: calc(50% - 55px); }
+
+	#score {
+		top: 70px;
+		right: 10px;
+	}
 }
 
